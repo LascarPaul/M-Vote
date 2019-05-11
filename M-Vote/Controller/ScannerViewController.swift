@@ -71,7 +71,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer!)
         
-        //not working
+        //not working message label is null
         if let messageLabel = messageLabel{
          messageLabel.text = "NO QR CODE"
         view.bringSubviewToFront(messageLabel)
@@ -140,11 +140,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         present(alertPrompt, animated: true, completion: nil)
     }
     
-    func found(code: String) {
-        print("found qr code")
-        
-        
-    }
+//    func found(code: String) {
+//        print("found qr code")
+//
+//
+//    }
     
     
     override var prefersStatusBarHidden: Bool {
@@ -161,7 +161,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let stringValue = readableObject.stringValue else {return}
+            //guard let stringValue = readableObject.stringValue else {return}
             let barCodeObject = previewLayer?.transformedMetadataObject(for: readableObject)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
@@ -169,7 +169,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 launchApp(decodedURL: readableObject.stringValue!)
                 messageLabel?.text = readableObject.stringValue
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            //found(code: stringValue)
         }
         
         //dismiss(animated: true)
