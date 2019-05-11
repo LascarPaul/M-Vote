@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="M_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dh5-Kk-Hf6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="4Hm-gE-eHD"/>
+                                    <constraint firstAttribute="height" constant="812" id="YYt-a4-lfy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qm-3Z-z7c">
+                                <rect key="frame" x="125" y="490" width="125" height="30"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Biometric Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVd-g2-bIH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo+(8)" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-Bq-5Wa">
+                                <rect key="frame" x="67" y="123" width="241" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="m7E-fE-kcn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dh5-Kk-Hf6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="737-Zx-zjl"/>
+                            <constraint firstItem="2qm-3Z-z7c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="E5h-4d-FIw"/>
+                            <constraint firstItem="2qm-3Z-z7c" firstAttribute="centerX" secondItem="Dh5-Kk-Hf6" secondAttribute="centerX" id="VzB-l1-GaL"/>
+                            <constraint firstAttribute="bottom" secondItem="Dh5-Kk-Hf6" secondAttribute="bottom" id="avF-Az-hWv"/>
+                            <constraint firstItem="2qm-3Z-z7c" firstAttribute="centerX" secondItem="Tfg-Bq-5Wa" secondAttribute="centerX" id="bZl-O9-i65"/>
+                            <constraint firstItem="Tfg-Bq-5Wa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="dDn-Y5-Uhx"/>
+                            <constraint firstItem="Dh5-Kk-Hf6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fdv-k0-PsM"/>
+                            <constraint firstItem="Dh5-Kk-Hf6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fua-f9-mH7"/>
+                            <constraint firstItem="Tfg-Bq-5Wa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="q0o-a9-y0W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2qm-3Z-z7c" secondAttribute="bottom" constant="258" id="qnL-mf-tPW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="134"/>
+        </scene>
+        <!--QR View Controller-->
+        <scene sceneID="PUF-3B-pga">
+            <objects>
+                <viewController storyboardIdentifier="QRViewController" id="LCn-IT-yz3" userLabel="QR View Controller" customClass="ScannerViewController" customModule="M_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YNp-Qa-KTR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4f-0K-Ci3">
+                                <rect key="frame" x="0.0" y="724" width="375" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M4f-0K-Ci3" firstAttribute="bottom" secondItem="4YY-YU-eC8" secondAttribute="bottom" id="2Ki-YE-BUB"/>
+                            <constraint firstAttribute="trailing" secondItem="M4f-0K-Ci3" secondAttribute="trailing" id="2cB-x0-XGh"/>
+                            <constraint firstItem="M4f-0K-Ci3" firstAttribute="top" secondItem="4YY-YU-eC8" secondAttribute="top" constant="680" id="CCL-dy-HoP"/>
+                            <constraint firstItem="M4f-0K-Ci3" firstAttribute="leading" secondItem="YNp-Qa-KTR" secondAttribute="leading" id="gfc-hf-LHb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4YY-YU-eC8"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="M4f-0K-Ci3" id="285-KK-lT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oim-Ac-O3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448.8" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo+(8)" width="333.33334350585938" height="292.33334350585938"/>
+    </resources>
+</document>

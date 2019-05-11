@@ -14,6 +14,7 @@
 		D6C2F588227F1BE400611BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C2F586227F1BE400611BB4 /* LaunchScreen.storyboard */; };
 		D6C2F593227F1BE400611BB4 /* M_VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F592227F1BE400611BB4 /* M_VoteTests.swift */; };
 		D6C2F59E227F1BE400611BB4 /* M_VoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59D227F1BE400611BB4 /* M_VoteUITests.swift */; };
+		D6C2F5AF2280AECF00611BB4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F5AE2280AECF00611BB4 /* ScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D6C2F599227F1BE400611BB4 /* M-VoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "M-VoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C2F59D227F1BE400611BB4 /* M_VoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_VoteUITests.swift; sourceTree = "<group>"; };
 		D6C2F59F227F1BE400611BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C2F5AE2280AECF00611BB4 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,12 @@
 		D6C2F57C227F1BE200611BB4 /* M-Vote */ = {
 			isa = PBXGroup;
 			children = (
+				D6C2F5B22280B77A00611BB4 /* Utilities */,
+				D6C2F5AD228077AB00611BB4 /* Controller */,
+				D6C2F5AC228077A700611BB4 /* View */,
+				D6C2F5AB2280779B00611BB4 /* Model */,
 				D6C2F57D227F1BE200611BB4 /* AppDelegate.swift */,
-				D6C2F57F227F1BE200611BB4 /* ViewController.swift */,
-				D6C2F581227F1BE200611BB4 /* Main.storyboard */,
 				D6C2F584227F1BE400611BB4 /* Assets.xcassets */,
-				D6C2F586227F1BE400611BB4 /* LaunchScreen.storyboard */,
 				D6C2F589227F1BE400611BB4 /* Info.plist */,
 			);
 			path = "M-Vote";
@@ -123,6 +126,38 @@
 				D6C2F59F227F1BE400611BB4 /* Info.plist */,
 			);
 			path = "M-VoteUITests";
+			sourceTree = "<group>";
+		};
+		D6C2F5AB2280779B00611BB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6C2F5AC228077A700611BB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2F586227F1BE400611BB4 /* LaunchScreen.storyboard */,
+				D6C2F581227F1BE200611BB4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6C2F5AD228077AB00611BB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2F5AE2280AECF00611BB4 /* ScannerViewController.swift */,
+				D6C2F57F227F1BE200611BB4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6C2F5B22280B77A00611BB4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C2F5AF2280AECF00611BB4 /* ScannerViewController.swift in Sources */,
 				D6C2F580227F1BE200611BB4 /* ViewController.swift in Sources */,
 				D6C2F57E227F1BE200611BB4 /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3G8MK7VS4;
 				INFOPLIST_FILE = "M-Vote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3G8MK7VS4;
 				INFOPLIST_FILE = "M-Vote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
